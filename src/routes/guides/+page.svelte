@@ -1,11 +1,17 @@
+<script>
+    export let data;
+    let guides = data.guides;
+</script>
+
 <div class="guides">
     <ul>
-        <li>
-            <a href="/">guide 1</a>
-        </li>
-        <li>
-            <a href="/">guide 2</a>
-        </li>
+        {#each guides as guide}
+            <li>
+                <a href="/guides/{guide.id}">
+                    <h3>{guide.title}</h3>
+                </a>
+            </li>
+        {/each}
     </ul>
 </div>
 

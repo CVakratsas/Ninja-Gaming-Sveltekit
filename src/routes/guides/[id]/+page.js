@@ -1,4 +1,7 @@
+import { redirect } from "@sveltejs/kit";
+
 export async function load({ fetch, params }) {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${params.id}`
   );

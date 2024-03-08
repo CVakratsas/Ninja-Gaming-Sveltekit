@@ -7,8 +7,7 @@
     <ul>
         {#each guides as guide}
             <li>
-                <!-- svelte-ignore illegal-attribute-character -->
-                <a sveltekit:prefetch href="/guides/{guide.id}">
+                <a href="/guides/{guide.id}">
                     <h3>{guide.title}</h3>
                 </a>
             </li>
